@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalani Dharmasiri - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-item, .project-card {
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+        .skill-item.visible, .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-image {
+            background-image: url("F:/Protfolio/images/image.jpeg");
+        }
+        ::selection {
+            background-color: rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur bg-slate-900/70 border-b border-white/10">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-3">
+                <a href="#home" class="font-semibold tracking-wide text-sky-300 hover:text-sky-200">Chalani • Portfolio</a>
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="#about" class="hover:text-sky-300">About</a>
+                    <a href="#skills" class="hover:text-sky-300">Skills</a>
+                    <a href="#projects" class="hover:text-sky-300">Projects</a>
+                    <a href="#contact" class="hover:text-sky-300">Contact</a>
+                    <a href="F:/Protfolio/Chalani_Dharmasiri_CV.pdf" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-sky-400/30 px-3 py-1.5 hover:bg-sky-400/10">
+                        <i data-lucide="file-down" class="h-4 w-4"></i> CV
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+                <div class="grid gap-10 md:grid-cols-2 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight fade-in">Chalani Dharmasiri</h1>
+                        <p class="mt-3 text-lg text-slate-300 fade-in" style="transition-delay: 0.1s">IT Undergraduate · Software & Network Enthusiast</p>
+                        <p class="mt-6 max-w-xl text-slate-300 fade-in" style="transition-delay: 0.15s">Turning ideas into secure, scalable tech solutions.</p>
+
+                        <div class="mt-8 flex flex-wrap gap-3 fade-in" style="transition-delay: 0.2s">
+                            <a href="#projects" class="group inline-flex items-center gap-2 rounded-2xl bg-sky-400/90 px-4 py-2 font-medium text-slate-900 hover:bg-sky-300">
+                                View Projects <i data-lucide="arrow-right" class="h-4 w-4 transition -translate-x-0 group-hover:translate-x-0.5"></i>
+                            </a>
+                            <a href="F:/Protfolio/Chalani_Dharmasiri_CV.pdf" target="_blank" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-4 py-2 hover:bg-white/5">
+                                <i data-lucide="file-down" class="h-4 w-4"></i> Download CV
+                            </a>
+                        </div>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-300">
+                            <span class="inline-flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4"></i> Bibile, Sri Lanka</span>
+                            <a href="mailto:chaladharmasiri@gmail.com" class="inline-flex items-center gap-2 hover:text-sky-300"><i data-lucide="mail" class="h-4 w-4"></i> chaladharmasiri@gmail.com</a>
+                            <a href="tel:+94762607459" class="inline-flex items-center gap-2 hover:text-sky-300"><i data-lucide="phone" class="h-4 w-4"></i> +94 76 260 7459</a>
+                        </div>
+
+                        <div class="mt-6 flex items-center gap-4">
+                            <a href="https://github.com/Chalanimadushika" target="_blank" class="hover:text-sky-300"><i data-lucide="github" class="h-5 w-5"></i></a>
+                            <a href="https://www.linkedin.com/in/chalani-dharmasiri-65b274279" target="_blank" class="hover:text-sky-300"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+                            <a href="#" target="_blank" class="hover:text-sky-300"><i data-lucide="globe" class="h-5 w-5"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square w-full rounded-3xl border border-white/10 bg-gradient-to-tr from-sky-400/20 via-fuchsia-400/10 to-transparent">
+                        <div class="absolute inset-0 m-6 rounded-2xl hero-image bg-cover bg-center opacity-90"></div>
+                        <div class="absolute inset-0 rounded-3xl ring-1 ring-white/10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-sky-300/80">About</p>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold">Who I am</h2>
+                    <p class="mt-3 text-slate-300">IT undergraduate with a passion for software engineering, databases, and networking. I enjoy turning requirements into clean, maintainable solutions.</p>
+                </div>
+                <div class="mx-auto max-w-3xl text-slate-300 leading-relaxed">
+                    <p>
+                        I specialize in building web interfaces and designing network architectures. I've worked on an e‑commerce concept (OKEY), a music streaming UI prototype, and an enterprise network design using Cisco Packet Tracer.
+                    </p>
+                    <p class="mt-4">
+                        I'm continuously learning—especially around backend APIs, database performance, and cybersecurity fundamentals—and I love collaborating in team environments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-slate-900/40 border-y border-white/10">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-sky-300/80">Skills</p>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold">What I use</h2>
+                    <p class="mt-3 text-slate-300">A mix of programming, databases, web frameworks, operating systems, and networking.</p>
+                </div>
+                <ul class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="code-2" class="h-5 w-5 shrink-0"></i>
+                        <span>Java / OOP</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="database" class="h-5 w-5 shrink-0"></i>
+                        <span>MySQL / DBMS</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="globe" class="h-5 w-5 shrink-0"></i>
+                        <span>Laravel / Web Dev</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="code-2" class="h-5 w-5 shrink-0"></i>
+                        <span>Linux / Windows / macOS</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="network" class="h-5 w-5 shrink-0"></i>
+                        <span>Networking (IPv4/VLSM, IPv6)</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="globe" class="h-5 w-5 shrink-0"></i>
+                        <span>APIs & REST</span>
+                    </li>
+                    <li class="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/40 p-4 skill-item">
+                        <i data-lucide="shield-check" class="h-5 w-5 shrink-0"></i>
+                        <span>Cybersecurity (Basics)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-sky-300/80">Projects</p>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold">Things I've built & designed</h2>
+                    <p class="mt-3 text-slate-300">Highlights from academic and personal work.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 project-card">
+                        <div class="aspect-[16/10] w-full bg-slate-800/50">
+                            <img src="F:/Protfolio/images/image1.png" alt="OKEY – Fashion Website" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">OKEY – Fashion Website</h3>
+                            <p class="mt-2 text-slate-300">A responsive e‑commerce concept for fashion apparel with clean UI and simple product flows.</p>
+                            <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300/80">
+                                <span class="rounded-full border border-white/10 px-2 py-1">HTML</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">CSS</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">JavaScript</span>
+                            </div>
+                            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sky-300 hover:text-sky-200">
+                                View project <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 project-card">
+                        <div class="aspect-[16/10] w-full bg-slate-800/50">
+                           <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop" alt="Music Streaming — UI Design" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Music Streaming — UI Design</h3>
+                            <p class="mt-2 text-slate-300">Mobile‑first UI for a music app focused on discoverability and smooth navigation.</p>
+                            <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300/80">
+                                <span class="rounded-full border border-white/10 px-2 py-1">Figma</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">UI/UX</span>
+                            </div>
+                            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sky-300 hover:text-sky-200">
+                                View project <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 project-card">
+                        <div class="aspect-[16/10] w-full bg-slate-800/50">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop" alt="Enterprise Network Design" class="h-full w-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Enterprise Network Design</h3>
+                            <p class="mt-2 text-slate-300">Campus topology with VLAN segmentation, addressing plan, and routing strategy.</p>
+                            <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300/80">
+                                <span class="rounded-full border border-white/10 px-2 py-1">Cisco PT</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">IPv4/VLSM</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">IPv6</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">LAN/WLAN</span>
+                                <span class="rounded-full border border-white/10 px-2 py-1">Fiber</span>
+                            </div>
+                            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sky-300 hover:text-sky-200">
+                                View project <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-900/40 border-y border-white/10">
+            <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto mb-10 max-w-3xl text-center">
+                    <p class="text-xs uppercase tracking-[0.2em] text-sky-300/80">Contact</p>
+                    <h2 class="mt-2 text-3xl md:text-4xl font-bold">Let's work together</h2>
+                    <p class="mt-3 text-slate-300">Reach out for collaborations, internships, or project ideas.</p>
+                </div>
+                <div class="mx-auto max-w-2xl grid gap-4">
+                    <a href="mailto:chaladharmasiri@gmail.com" class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/40 p-4 hover:bg-white/5">
+                        <span class="inline-flex items-center gap-3"><i data-lucide="mail" class="h-5 w-5"></i> chaladharmasiri@gmail.com</span>
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                    <a href="tel:+94762607459" class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/40 p-4 hover:bg-white/5">
+                        <span class="inline-flex items-center gap-3"><i data-lucide="phone" class="h-5 w-5"></i> +94 76 260 7459</span>
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                    <div class="grid grid-cols-3 gap-4 text-slate-300">
+                        <a href="https://github.com/Chalanimadushika" target="_blank" class="flex items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 p-4 hover:bg-white/5"><i data-lucide="github" class="h-5 w-5"></i></a>
+                        <a href="https://www.linkedin.com/in/chalani-dharmasiri-65b274279" target="_blank" class="flex items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 p-4 hover:bg-white/5"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+                        <a href="#" target="_blank" class="flex items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 p-4 hover:bg-white/5"><i data-lucide="globe" class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-sm text-slate-400">
+        <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <p>© <span id="current-year">2025</span> Chalani Dharmasiri. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Scroll animation
+        function checkVisibility() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const skillItems = document.querySelectorAll('.skill-item');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            fadeElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    el.classList.add('visible');
+                }
+            });
+            
+            skillItems.forEach((el, index) => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+            
+            projectCards.forEach((el, index) => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }
+        
+        // Initial check and add scroll listener
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+</html>
